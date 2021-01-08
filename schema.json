@@ -1,0 +1,60 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1610104556.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"content"
+	],
+	"properties": {
+		"content": {
+			"$id": "#root/content", 
+			"title": "Content", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/content/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"name",
+					"amount",
+					"unit"
+				],
+				"properties": {
+					"name": {
+						"$id": "#root/content/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Apfel"
+						],
+						"pattern": "^.*$"
+					},
+					"amount": {
+						"$id": "#root/content/items/amount", 
+						"title": "Amount", 
+						"type": "integer",
+						"examples": [
+							10
+						],
+						"default": 0
+					},
+					"unit": {
+						"$id": "#root/content/items/unit", 
+						"title": "Unit", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"pieces"
+						],
+						"pattern": "gramms|pieces|packs|kilogramms"
+					}
+				}
+			}
+
+		}
+	}
+}
